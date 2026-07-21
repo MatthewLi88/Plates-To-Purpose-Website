@@ -74,7 +74,7 @@
         <div class="section-intro section-intro--center reveal">
           <span class="eyebrow">Where We Are</span>
           <h2>Our chapters across the country</h2>
-          <p>Hover over (or tap) a dot to see the chapter. Solid dots are active chapters; hollow dots are chapters currently launching.</p>
+          <p>Hover over (or tap) a dot to see the chapter and its leadership.</p>
         </div>
 
       <!-- US map (AlbersUSA projection, viewBox 975x610), generated from
@@ -94,10 +94,10 @@
         <circle class="map-dot map-dot--active" cx="751.2" cy="372.8" r="10" tabindex="0" data-name="Greer, SC"></circle>
         <circle class="map-dot map-dot--active" cx="860.2" cy="223" r="10" tabindex="0" data-name="Hillsborough, NJ"></circle>
         <circle class="map-dot map-dot--active" cx="777.4" cy="475.2" r="10" tabindex="0" data-name="Jacksonville, FL"></circle>
-        <circle class="map-dot map-dot--launching" cx="474.1" cy="591.8" r="9" tabindex="0" data-name="South Padre Island, TX (launching)"></circle>
-        <circle class="map-dot map-dot--launching" cx="471" cy="374.6" r="9" tabindex="0" data-name="Edmond, OK (launching)"></circle>
-        <circle class="map-dot map-dot--launching" cx="297" cy="452.7" r="9" tabindex="0" data-name="El Paso, TX (launching)"></circle>
-        <circle class="map-dot map-dot--launching" cx="495.2" cy="441.4" r="9" tabindex="0" data-name="Carrollton & Hebron, TX (launching)"></circle>
+        <circle class="map-dot map-dot--active" cx="474.1" cy="591.8" r="10" tabindex="0" data-name="South Padre Island, TX"></circle>
+        <circle class="map-dot map-dot--active" cx="471" cy="374.6" r="10" tabindex="0" data-name="Edmond, OK"></circle>
+        <circle class="map-dot map-dot--active" cx="297" cy="452.7" r="10" tabindex="0" data-name="El Paso, TX"></circle>
+        <circle class="map-dot map-dot--active" cx="495.2" cy="441.4" r="10" tabindex="0" data-name="Carrollton & Hebron, TX"></circle>
         </svg>
         <div class="map-tooltip" id="map-tooltip" role="status"></div>
       </div>
@@ -105,7 +105,6 @@
         <div class="map-legend reveal">
           <span><svg class="legend-star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L14.6 8.6 L21.7 9.2 L16.3 13.9 L18 20.8 L12 17 L6 20.8 L7.7 13.9 L2.3 9.2 L9.4 8.6 Z"/></svg> Founding chapter</span>
           <span><i class="legend-dot legend-dot--active"></i> Active chapter</span>
-          <span><i class="legend-dot legend-dot--launching"></i> Launching</span>
         </div>
         <!-- International chapters (not on the US map). To add a leader
              photo, replace the <span class="ldr-avatar"> with
@@ -121,9 +120,9 @@
             </div>
           </div>
           <div class="card intl-card">
-            <div class="intl-city">New Delhi, India <em>Launching</em></div>
+            <div class="intl-city">New Delhi, India <em>Active</em></div>
             <div class="ldr"><span class="ldr-avatar">PM</span>
-              <div class="ldr-meta"><div class="ldr-name">Prateek Manderna</div><div class="ldr-role">Chapter Founder</div></div>
+              <div class="ldr-meta"><div class="ldr-name">Prateek Manderna</div><div class="ldr-role">President</div></div>
             </div>
           </div>
         </div>
@@ -140,15 +139,15 @@
         <div class="grid-3">
           <div class="card reveal">
             <h3>Texas</h3>
-            <p>Southlake (founding chapter) &middot; Frisco &middot; Coppell &amp; Irving &middot; plus South Padre Island, El Paso, and Carrollton &amp; Hebron launching soon.</p>
+            <p>Southlake (founding chapter) &middot; Frisco &middot; Coppell &amp; Irving &middot; South Padre Island &middot; El Paso &middot; Carrollton &amp; Hebron.</p>
           </div>
           <div class="card reveal">
             <h3>Across the U.S.</h3>
-            <p>Greenwood Village, Colorado &middot; Scottsdale, Arizona &middot; Greer, South Carolina &middot; Hillsborough, New Jersey &middot; Jacksonville, Florida &middot; Edmond, Oklahoma (launching).</p>
+            <p>Greenwood Village, Colorado &middot; Scottsdale, Arizona &middot; Greer, South Carolina &middot; Hillsborough, New Jersey &middot; Jacksonville, Florida &middot; Edmond, Oklahoma.</p>
           </div>
           <div class="card reveal">
             <h3>International</h3>
-            <p>London, United Kingdom &middot; New Delhi, India (launching). Student-led food rescue is going global.</p>
+            <p>London, United Kingdom &middot; New Delhi, India. Student-led food rescue is going global.</p>
           </div>
         </div>
       </div>
@@ -188,7 +187,7 @@
       ],
       "Coppell & Irving, TX": [
         { name: "Dharani Konjeti", role: "President", photo: null },
-        { name: "Kanishk Gandhi", role: "Vice President", photo: null },
+        { name: "Nishtha Makwana", role: "Vice President", photo: null },
       ],
       "Greenwood Village, CO": [
         { name: "Om Khurana", role: "President", photo: null },
@@ -210,17 +209,18 @@
         { name: "Avi Jain", role: "Co-Lead", photo: null },
         { name: "Dheeraj", role: "Co-Lead", photo: null },
       ],
-      "South Padre Island, TX (launching)": [
-        { name: "Vrinda Patel", role: "Chapter Founder", photo: null },
+      "South Padre Island, TX": [
+        { name: "Vrinda Patel", role: "President", photo: null },
+        { name: "Divya Nagunoori", role: "Vice President", photo: null },
       ],
-      "Edmond, OK (launching)": [
-        { name: "Ben Watts", role: "Chapter Founder", photo: null },
+      "Edmond, OK": [
+        { name: "Ben Watts", role: "President", photo: null },
       ],
-      "El Paso, TX (launching)": [
-        { name: "Arnav Tonde", role: "Chapter Founder", photo: null },
+      "El Paso, TX": [
+        { name: "Arnav Tonde", role: "President", photo: null },
       ],
-      "Carrollton & Hebron, TX (launching)": [
-        { name: "Medha Allu", role: "Chapter Founder", photo: null },
+      "Carrollton & Hebron, TX": [
+        { name: "Medha Allu", role: "President", photo: null },
       ],
     };
 
