@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Plates to Purpose</title>
+  <meta name="description" content="Get in touch with Plates to Purpose to volunteer, donate food, or partner with us.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">Contact Us</span>
+        <h1>Let&rsquo;s get you involved</h1>
+        <p>
+          Whether you want to volunteer, donate surplus food, receive rescued
+          food, or start a chapter &mdash; send us a message and we&rsquo;ll get
+          back to you.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+
+        <!-- Contact details -->
+        <div class="reveal">
+          <h2>Reach us directly</h2>
+          <div class="card contact-info-card">
+            <div class="contact-line">
+              <strong>Email</strong>
+              <a href="mailto:platestopurpose@gmail.com">platestopurpose@gmail.com</a>
+            </div>
+            <div class="contact-line">
+              <strong>Phone</strong>
+              <a href="tel:+16827067960">+1 (682) 706-7960</a>
+            </div>
+            <div class="contact-line">
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/platestopurpose" target="_blank" rel="noopener">@platestopurpose</a>
+            </div>
+            <div class="contact-line">
+              <strong>Based in</strong>
+              <span>Southlake, Texas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Get involved form.
+             This is a frontend-only form: submitting opens the visitor's
+             email app with the message pre-filled (see the script below).
+             To collect submissions automatically instead, connect a form
+             service like Formspree or Google Forms and set the form's
+             "action" attribute to the service URL.                        -->
+        <div class="reveal">
+          <h2>Send a message</h2>
+          <form class="contact-form" id="contact-form">
+            <div class="form-field">
+              <label for="cf-name">Your name</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="cf-email">Email address</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-field">
+              <label for="cf-role">I&rsquo;m interested in&hellip;</label>
+              <select id="cf-role" name="role" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Volunteering</option>
+                <option>Donating food (business or school)</option>
+                <option>Receiving food (pantry, shelter, or organization)</option>
+                <option>Making a donation</option>
+                <option>Starting a chapter</option>
+                <option>Something else</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required placeholder="Tell us a little about yourself and how you'd like to help."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--green">Send message</button>
+            <p class="form-note">
+              Submitting opens your email app with this message addressed to
+              platestopurpose@gmail.com.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/scroll.js"></script>
+  <script>
+    // Frontend-only form handling: build a mailto link from the fields.
+    document.getElementById("contact-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("cf-name").value.trim();
+      const email = document.getElementById("cf-email").value.trim();
+      const role = document.getElementById("cf-role").value;
+      const message = document.getElementById("cf-message").value.trim();
+
+      const subject = encodeURIComponent(`Get Involved: ${role} — ${name}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nInterested in: ${role}\n\n${message}`
+      );
+      window.location.href = `mailto:platestopurpose@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>

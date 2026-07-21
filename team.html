@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team — Plates to Purpose</title>
+  <meta name="description" content="Meet the student leadership team behind Plates to Purpose.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="team">
+
+  <header class="site-header" id="site-header"></header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="eyebrow">About &middot; Our Team</span>
+        <h1>Meet the National Executive Team</h1>
+        <p>
+          Plates to Purpose is led entirely by students who believe age is no
+          barrier to making a lasting impact in the community.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Hover (or tap on mobile) a photo to flip it and read a short bio.
+             To edit a bio, change the text inside the matching flip-back div. -->
+        <div class="team-grid">
+
+          <div class="team-card reveal">
+            <div class="flip" tabindex="0" role="button" aria-label="Flip to read about Mihir Kakarala">
+              <div class="flip-inner">
+                <div class="flip-front"><img src="assets/images/team-mihir.jpg" alt="Headshot of Mihir Kakarala"></div>
+                <div class="flip-back"><p>Mihir founded Plates to Purpose after learning about the realities of food insecurity and food waste so close to home, inspiring him to make a hands-on impact in his community. Today, Mihir leads the organization&rsquo;s strategy, partnerships, and operations to rescue surplus food and deliver it to families and individuals in need.</p></div>
+              </div>
+            </div>
+            <h3 class="team-name">Mihir Kakarala</h3>
+            <div class="team-role">Founder &amp; CEO</div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="flip" tabindex="0" role="button" aria-label="Flip to read about Parin Chanana">
+              <div class="flip-inner">
+                <div class="flip-front"><img src="assets/images/team-parin.jpg" alt="Headshot of Parin Chanana"></div>
+                <div class="flip-back"><p>Parin oversees day-to-day operations, translating the organization&rsquo;s broader strategy into coordinated food recovery pickups, volunteer efforts, and donation logistics. Beyond daily execution, he leads expansion and outreach by creating partnerships, securing funding through grants, streamlining operational systems, and establishing chapters across locations to maximize the organization&rsquo;s community impact.</p></div>
+              </div>
+            </div>
+            <h3 class="team-name">Parin Chanana</h3>
+            <div class="team-role">Co-Founder &amp; COO</div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="flip" tabindex="0" role="button" aria-label="Flip to read about Matthew Li">
+              <div class="flip-inner">
+                <div class="flip-front"><img src="assets/images/team-matthew.jpg" alt="Headshot of Matthew Li"></div>
+                <div class="flip-back"><p>As CTO, Matthew designs the technology behind Plates to Purpose, building the digital infrastructure that has helped rescue over 45,000 food items. From the organization&rsquo;s website to its donation tracking systems, he creates tools that turn logistics into impact, ensuring surplus food reaches people instead of landfills.</p></div>
+              </div>
+            </div>
+            <h3 class="team-name">Matthew Li</h3>
+            <div class="team-role">CTO</div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="flip" tabindex="0" role="button" aria-label="Flip to read about Niki Atla">
+              <div class="flip-inner">
+                <div class="flip-front"><img src="assets/images/team-niki.jpg" alt="Headshot of Niki Atla"></div>
+                <div class="flip-back"><p>As Vice President of Plates to Purpose, Niki helps oversee food rescue operations, volunteer coordination, and community outreach. She works with partner organizations to ensure surplus food is efficiently redirected to local shelters and communities facing food insecurity.</p></div>
+              </div>
+            </div>
+            <h3 class="team-name">Niki Atla</h3>
+            <div class="team-role">Vice President</div>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="flip" tabindex="0" role="button" aria-label="Flip to read about Siri Vangala">
+              <div class="flip-inner">
+                <div class="flip-front"><img src="assets/images/team-siri.jpg" alt="Headshot of Siri Vangala"></div>
+                <div class="flip-back"><p>Siri&rsquo;s role has expanded to developing partnerships that strengthen PTP&rsquo;s presence in schools and broaden its community impact. She also supports the student volunteers who make PTP&rsquo;s food recovery efforts possible.</p></div>
+              </div>
+            </div>
+            <h3 class="team-name">Siri Vangala</h3>
+            <div class="team-role">Vice President</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Want to join the team?</h2>
+          <p>We&rsquo;re always looking for passionate volunteers and future chapter leaders.</p>
+          <a href="contact.html" class="btn btn--green">Reach Out</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/scroll.js"></script>
+  <script>
+    // On touch devices there is no hover, so tapping toggles the flip.
+    document.querySelectorAll(".flip").forEach((card) => {
+      card.addEventListener("click", () => card.classList.toggle("is-flipped"));
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          card.classList.toggle("is-flipped");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
