@@ -746,7 +746,7 @@ html.js .reveal:nth-child(4) { transition-delay: 0.24s; }
 /* --- Home hero photo banner (professional photo + tagline quote) --- */
 .hero-banner {
   position: relative;
-  min-height: 460px;
+  min-height: 620px;                /* taller banner to fit the group photo */
   display: grid;
   place-items: center;
   text-align: center;
@@ -758,19 +758,26 @@ html.js .reveal:nth-child(4) { transition-delay: 0.24s; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;      /* anchor high in the photo so faces land in view */
 }
-/* Dark green wash so the quote stays readable over the photo */
+/* Dark wash concentrated at the top (behind the tagline) so the quote stays
+   readable while faces in the middle of the photo remain bright. */
 .hero-banner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(20, 32, 16, 0.45) 0%, rgba(20, 32, 16, 0.62) 100%);
+  background: linear-gradient(180deg,
+    rgba(20, 32, 16, 0.65) 0%,
+    rgba(20, 32, 16, 0.35) 40%,
+    rgba(20, 32, 16, 0.10) 100%);
 }
 .hero-banner-content {
   position: relative;
   z-index: 1;
   padding: 60px 24px;
   max-width: 880px;
+  align-self: start;                /* sit near the top of the banner */
+  margin-top: 40px;                 /* small breathing room from the header */
 }
 .hero-banner-quote {
   font-family: var(--font-display);
