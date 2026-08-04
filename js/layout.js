@@ -112,6 +112,7 @@ function buildFooter() {
     </div>
     <div class="footer-bottom">
       <span>&copy; ${year} Plates to Purpose. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a></span>
       <span>A 501(c)(3) nonprofit organization</span>
     </div>
   </div>`;
