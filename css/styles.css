@@ -1189,6 +1189,21 @@ html.js .reveal-right.is-visible { opacity: 1; transform: none; }
   font-size: 0.95rem;
   padding: 9px 18px;
   border-radius: 999px;
+  text-align: center;
+  line-height: 1.3;
+}
+/* Chips that carry a title (name + <em>role</em>) get a softer shape */
+.chapter-team-names span:has(em) {
+  border-radius: 14px;
+  padding: 10px 18px;
+}
+.chapter-team-names em {
+  font-style: normal;
+  display: block;
+  font-weight: 500;
+  font-size: 0.82rem;
+  color: var(--green-deep);
+  margin-top: 2px;
 }
 
 
