@@ -1191,6 +1191,41 @@ html.js .reveal-right.is-visible { opacity: 1; transform: none; }
   border-radius: 999px;
 }
 
+/* Chapter Presidents grid — 4 across on desktop, tightens on smaller screens */
+.president-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px 20px;
+}
+@media (max-width: 900px) { .president-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .president-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.president { text-align: center; }
+.president-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 22%;
+  border: 3px solid var(--green-tint);
+  box-shadow: var(--shadow-soft);
+  margin: 0 auto 12px;
+  display: block;
+}
+.president-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+.president-location {
+  color: var(--green-deep);
+  font-weight: 500;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
 /* Featured Southlake leaders with small square photos */
 .chapter-team-featured {
   display: flex;
