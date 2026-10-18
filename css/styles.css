@@ -376,13 +376,40 @@ img { max-width: 100%; display: block; }
 .stat-number {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
   color: var(--green-deep);
-  line-height: 1;
-  margin-bottom: 8px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
 }
 .stat-card--blue .stat-number { color: var(--blue-deep); }
 .stat-label { color: var(--muted); font-weight: 500; }
+.stat-label sup { line-height: 0; }
+.stat-label sup a {
+  text-decoration: none;
+  color: var(--green-deep);
+  font-weight: 700;
+}
+
+/* Impact page: reach line + source footnote under the stat tiles */
+.impact-reach {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.impact-reach strong { color: var(--green-deep); }
+.impact-footnote {
+  text-align: center;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  scroll-margin-top: 90px;
+}
 
 /* Photo frame used across pages */
 .photo {

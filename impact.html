@@ -28,42 +28,47 @@
       </div>
     </section>
 
-    <!-- IMPACT NUMBERS — temporarily removed at the team's request.
-         To bring them back, delete this comment wrapper and update the
-         data-count values from the tracking spreadsheet.
-     ================= IMPACT NUMBERS ================= 
-     UPDATE THESE NUMBERS from your tracking spreadsheet:
-         change the data-count value on each stat below.
-         data-prefix adds a symbol before the number (like $),
-         data-suffix adds one after (like +).                     
+    <!-- ================= IMPACT NUMBERS =================
+         Counters animate when they scroll into view (see js/scroll.js).
+         - data-count: target number (floats work with data-decimals)
+         - data-decimals: digits after the decimal point (default 0)
+         - data-prefix / data-suffix: symbols around the number
+         Update values here as the organization grows. -->
     <section class="section">
       <div class="container">
         <div class="grid-4">
           <div class="card stat-card reveal">
-            <div class="stat-number" data-count="45000" data-suffix="+"></div>
-            <div class="stat-label">food items rescued</div>
-          </div>
-          <div class="card stat-card stat-card--blue reveal">
-            <div class="stat-number" data-count="31000" data-prefix="$" data-suffix="+"></div>
-            <div class="stat-label">worth of food redistributed</div>
+            <div class="stat-number" data-count="50119.5" data-decimals="1" data-suffix=" lbs"></div>
+            <div class="stat-label">food rescued, all-time</div>
           </div>
           <div class="card stat-card reveal">
-            <div class="stat-number" data-count="10" data-suffix="+"></div>
-            <div class="stat-label">partner organizations</div>
+            <div class="stat-number" data-count="142000" data-prefix="$"></div>
+            <div class="stat-label">estimated food value<sup><a href="#impact-footnote">*</a></sup></div>
           </div>
-          <div class="card stat-card stat-card--blue reveal">
-            <div class="stat-number" data-count="1000" data-suffix="+"></div>
-            <div class="stat-label">people provided with meals</div>
+          <div class="card stat-card reveal">
+            <div class="stat-number" data-count="19212"></div>
+            <div class="stat-label">people fed</div>
+          </div>
+          <div class="card stat-card reveal">
+            <div class="stat-number" data-count="16"></div>
+            <div class="stat-label">chapters</div>
           </div>
         </div>
-        <p class="reveal" style="text-align:center; color: var(--muted); margin-top: 24px; font-size: 0.95rem;">
-          Numbers are updated from our donation tracking records.
+
+        <!-- Geographic reach line + source footnote -->
+        <p class="impact-reach reveal">
+          Operating in
+          <strong><span data-count="6"></span> states</strong>
+          across
+          <strong><span data-count="3"></span> countries</strong>.
+        </p>
+        <p class="impact-footnote reveal" id="impact-footnote">
+          *Estimated food value is calculated at $2.84 per pound, based on
+          the EPA Office of Research and Development&rsquo;s wasted food
+          value estimate.
         </p>
       </div>
     </section>
-
-
-    -->
 
     <!-- ================= PHOTO GALLERY ================= -->
     <section class="section section--tint">

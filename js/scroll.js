@@ -60,10 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ----- 2. Count-up statistics --------------------------------------- */
-  const formatNumber = (n) => n.toLocaleString("en-US");
+  // Supports data-count="50119.5" (floats) via data-decimals="1" to show
+  // that many digits after the decimal. Default is integer formatting.
+  const formatNumber = (n, decimals) =>
+    n.toLocaleString("en-US", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
 
   const runCounter = (el) => {
-    const target = parseInt(el.dataset.count, 10);
+    const target = parseFloat(el.dataset.count);
+    const decimals = parseInt(el.dataset.decimals || "0", 10);
     const prefix = el.dataset.prefix || "";
     const suffix = el.dataset.suffix || "";
     const duration = 1600; // ms
@@ -73,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const progress = Math.min((now - start) / duration, 1);
       // ease-out so the count slows as it lands on the final number
       const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = prefix + formatNumber(Math.round(target * eased)) + suffix;
+      const current = target * eased;
+      el.textContent = prefix + formatNumber(current, decimals) + suffix;
       if (progress < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
@@ -82,9 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const counterEls = document.querySelectorAll("[data-count]");
   if (reducedMotion) {
     counterEls.forEach((el) => {
+      const decimals = parseInt(el.dataset.decimals || "0", 10);
       el.textContent =
         (el.dataset.prefix || "") +
-        formatNumber(parseInt(el.dataset.count, 10)) +
+        formatNumber(parseFloat(el.dataset.count), decimals) +
         (el.dataset.suffix || "");
     });
   } else if (counterEls.length) {
