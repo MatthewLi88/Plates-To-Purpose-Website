@@ -55,18 +55,103 @@
           </div>
         </div>
 
-        <!-- Geographic reach line + source footnote -->
+        <!-- Geographic reach line -->
         <p class="impact-reach reveal">
           Operating in
           <strong><span data-count="6"></span> states</strong>
           across
           <strong><span data-count="3"></span> countries</strong>.
         </p>
+
+        <!-- Top donors: proportional bars scale to the top donor's volume.
+             To update, edit the data-lbs value (just the number) and the
+             text label; the bar width is calculated at page load. -->
+        <div class="donors reveal">
+          <h3 class="donors-title">Top Donors</h3>
+          <ol class="donors-list">
+            <li>
+              <span class="donor-rank">1</span>
+              <span class="donor-name">Peace Love &amp; Little Donuts</span>
+              <span class="donor-bar"><span data-lbs="11000"></span></span>
+              <span class="donor-amount">~11,000 lbs</span>
+            </li>
+            <li>
+              <span class="donor-rank">2</span>
+              <span class="donor-name">Carroll ISD</span>
+              <span class="donor-bar"><span data-lbs="9000"></span></span>
+              <span class="donor-amount">~9,000 lbs</span>
+            </li>
+            <li>
+              <span class="donor-rank">3</span>
+              <span class="donor-name">Dan&rsquo;s Bagels</span>
+              <span class="donor-bar"><span data-lbs="2300"></span></span>
+              <span class="donor-amount">~2,300 lbs</span>
+            </li>
+            <li>
+              <span class="donor-rank">4</span>
+              <span class="donor-name">Parlor Donuts</span>
+              <span class="donor-bar"><span data-lbs="1900"></span></span>
+              <span class="donor-amount">~1,900 lbs</span>
+            </li>
+            <li>
+              <span class="donor-rank">5</span>
+              <span class="donor-name">Ami Aggarwal Catering</span>
+              <span class="donor-bar"><span data-lbs="1200"></span></span>
+              <span class="donor-amount">~1,200 lbs</span>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Footnotes: receipts attribution and EPA value calculation -->
+        <p class="impact-footnote reveal">
+          *All numbers verified by food pantry receipts.
+        </p>
         <p class="impact-footnote reveal" id="impact-footnote">
           *Estimated food value is calculated at $2.84 per pound, based on
           the EPA Office of Research and Development&rsquo;s wasted food
           value estimate.
         </p>
+      </div>
+    </section>
+
+    <!-- ================= TOP DONORS LEADERBOARD =================
+         Ranked list of partners by pounds rescued. Keep sorted highest to
+         lowest; add or edit rows below as totals change. -->
+    <section class="section">
+      <div class="container">
+        <div class="section-intro section-intro--center reveal">
+          <span class="eyebrow">Top Donors</span>
+          <h2>The partners powering our work</h2>
+          <p>Businesses and schools whose consistent donations drive our impact.</p>
+        </div>
+
+        <ol class="donor-board reveal">
+          <li class="donor">
+            <span class="donor-rank">1</span>
+            <span class="donor-name">Peace Love &amp; Little Donuts</span>
+            <span class="donor-amount">~11,000 lbs</span>
+          </li>
+          <li class="donor">
+            <span class="donor-rank">2</span>
+            <span class="donor-name">Carroll ISD</span>
+            <span class="donor-amount">~9,000 lbs</span>
+          </li>
+          <li class="donor">
+            <span class="donor-rank">3</span>
+            <span class="donor-name">Dan&rsquo;s Bagels</span>
+            <span class="donor-amount">~2,300 lbs</span>
+          </li>
+          <li class="donor">
+            <span class="donor-rank">4</span>
+            <span class="donor-name">Parlor Donuts</span>
+            <span class="donor-amount">~1,900 lbs</span>
+          </li>
+          <li class="donor">
+            <span class="donor-rank">5</span>
+            <span class="donor-name">Ami Aggarwal Catering</span>
+            <span class="donor-amount">~1,200 lbs</span>
+          </li>
+        </ol>
       </div>
     </section>
 

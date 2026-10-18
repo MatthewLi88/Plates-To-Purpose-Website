@@ -111,6 +111,36 @@ document.addEventListener("DOMContentLoaded", () => {
     counterEls.forEach((el) => counterObserver.observe(el));
   }
 
+  /* ----- 2b. Donor bars: proportional fill, animated in on scroll ----- */
+  // Each .donor-bar > span carries data-lbs; the largest value fills 100%
+  // of the bar, and every other row scales relative to it.
+  const donorFills = document.querySelectorAll(".donor-bar > span[data-lbs]");
+  if (donorFills.length) {
+    const maxLbs = Math.max(
+      ...[...donorFills].map((s) => parseFloat(s.dataset.lbs))
+    );
+    const fillRow = (el) => {
+      const pct = (parseFloat(el.dataset.lbs) / maxLbs) * 100;
+      el.style.width = pct + "%";
+    };
+    if (reducedMotion) {
+      donorFills.forEach(fillRow);
+    } else {
+      const barObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              fillRow(entry.target);
+              barObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      donorFills.forEach((el) => barObserver.observe(el));
+    }
+  }
+
   /* ----- 3. Rescue route path drawing (home page only) ----------------- */
   /* A faint dashed guide line is always visible; this draws a solid green
      line over it as you scroll, like a route being traced on a map.      */
